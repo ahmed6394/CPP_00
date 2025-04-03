@@ -32,3 +32,23 @@ void Contact::set_number(string number)
 {
     this->number = number;
 }
+string Contact::get_firstname()
+{
+    return(this->firstname);
+}
+string Contact::get_lastname()
+{
+    return(this->lastname);
+}
+string Contact::get_nickname()
+{
+    return(this->nickname);
+}
+string Contact::get_secrate()
+{
+    return(this->secrate);
+}
+string Contact::get_number()
+{
+    return(this->number);
+}

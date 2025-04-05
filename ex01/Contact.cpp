@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 18:57:07 by gahmed            #+#    #+#             */
-/*   Updated: 2025/04/02 18:57:08 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/04/04 19:57:47 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ void Contact::set_nickname(string nickname)
 {
     this->nickname = nickname;
 }
-void Contact::set_secrate(string secrate)
+void Contact::set_secret(string secret)
 {
-    this->secrate = secrate;
+    this->secret = secret;
 }
 void Contact::set_number(string number)
 {
@@ -44,9 +44,9 @@ string Contact::get_nickname()
 {
     return(this->nickname);
 }
-string Contact::get_secrate()
+string Contact::get_secret()
 {
-    return(this->secrate);
+    return(this->secret);
 }
 string Contact::get_number()
 {

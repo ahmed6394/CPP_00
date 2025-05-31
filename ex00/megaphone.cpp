@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 13:40:18 by gahmed            #+#    #+#             */
-/*   Updated: 2025/04/02 14:39:53 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/05/31 12:27:05 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-using namespace std;
 
 int main(int ac, char **av)
 {
@@ -21,14 +20,14 @@ int main(int ac, char **av)
 		{
 			for (int j = 0; av[i][j] != '\0'; j++)
 			{
-				cout << (char)toupper(av[i][j]);
+				std::cout << (char)toupper(av[i][j]);
 			}
 			if (av[i] != NULL)
-				cout << " ";
+				std::cout << " ";
 		}
-		cout << endl;
+		std::cout << std::endl;
 	}
 	else
-		cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" <<endl;
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" <<std::endl;
 	return (0);
 }

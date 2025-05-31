@@ -3,36 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 18:57:01 by gahmed            #+#    #+#             */
-/*   Updated: 2025/04/04 19:57:10 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/05/31 12:30:04 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <iostream>
-using namespace std;
 
 class Contact
 {
 private:
-    string firstname;
-    string lastname;
-    string nickname;
-    string secret;
-    string number;
+    std::string firstname;
+    std::string lastname;
+    std::string nickname;
+    std::string secret;
+    std::string number;
 public:
-    void set_firstname(string firstname);
-    void set_lastname(string lastname);
-    void set_nickname(string nickname);
-    void set_secret(string secret);
-    void set_number(string number);
-    string get_firstname();
-    string get_lastname();
-    string get_nickname();
-    string get_secret();
-    string get_number();
-
+    void set_firstname(std::string firstname);
+    void set_lastname(std::string lastname);
+    void set_nickname(std::string nickname);
+    void set_secret(std::string secret);
+    void set_number(std::string number);
+    std::string get_firstname();
+    std::string get_lastname();
+    std::string get_nickname();
+    std::string get_secret();
+    std::string get_number();
 };
 

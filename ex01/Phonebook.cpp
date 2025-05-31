@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 18:56:57 by gahmed            #+#    #+#             */
-/*   Updated: 2025/04/05 20:11:23 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/05/31 12:35:32 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int Phonebook::get_size()
 	return (this->size);
 }
 
-void Phonebook::add_contact(string data[5])
+void Phonebook::add_contact(std::string data[5])
 {
 	int index;
 
@@ -34,11 +34,11 @@ void Phonebook::add_contact(string data[5])
 
 void Phonebook::display_contact(int i)
 {
-	cout << "First Name: " << this->contacts[i].get_firstname() << endl;
-	cout << "last Name: " << this->contacts[i].get_lastname() << endl;
-	cout << "Nick Name: " << this->contacts[i].get_nickname() << endl;
-	cout << "Number: " << this->contacts[i].get_number() << endl;
-	cout << "Secret: " << this->contacts[i].get_secret() << endl;
+	std::cout << "First Name: " << this->contacts[i].get_firstname() << std::endl;
+	std::cout << "last Name: " << this->contacts[i].get_lastname() << std::endl;
+	std::cout << "Nick Name: " << this->contacts[i].get_nickname() << std::endl;
+	std::cout << "Number: " << this->contacts[i].get_number() << std::endl;
+	std::cout << "Secret: " << this->contacts[i].get_secret() << std::endl;
 }
 
 void Phonebook::display_phonebook()
@@ -47,16 +47,16 @@ void Phonebook::display_phonebook()
 
 	while (i < this->size)
 	{
-		cout << i << ". " << endl;
-		cout << "First Name: ";
+		std::cout << i << ". " << std::endl;
+		std::cout << "First Name: ";
 		print_name(this->contacts[i].get_firstname());
-		cout << endl;
-		cout << "Last Name: ";
+		std::cout << std::endl;
+		std::cout << "Last Name: ";
 		print_name(this->contacts[i].get_lastname());
-		cout << endl;
-		cout << "Nick Name: ";
+		std::cout << std::endl;
+		std::cout << "Nick Name: ";
 		print_name(this->contacts[i].get_nickname());
-		cout << endl;
+		std::cout << std::endl;
 		i++;
 	}
 }
@@ -67,14 +67,14 @@ void	print_name(std::string str)
 	j = 0;
 	if (str.length() > 10)
 	{
-		cout << str.substr(0, 9);
-		cout << ".";
+		std::cout << str.substr(0, 9);
+		std::cout << ".";
 	}
 	else
 	{
 		j = 0;
 		while (j++ < 10 - str.length())
-			cout << " ";
-		cout << str;
+			std::cout << " ";
+		std::cout << str;
 	}
 }

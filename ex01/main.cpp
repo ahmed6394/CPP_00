@@ -1,6 +1,6 @@
 #include "Phonebook.hpp"
 
-static int is_valid_number(string number)
+static int is_valid_number(std::string number)
 {
     int i = 0;
     while(number[i])
@@ -20,39 +20,39 @@ static int is_valid_number(string number)
 int main()
 {
     Phonebook phonebook;
-    string data[5];
-    string input;
+    std::string data[5];
+    std::string input;
     int i = 0;
-    cout << "Welcome to the Phonebook!" << endl;
-    cout << "You can add a contact by typing 'ADD'" << endl;
-    cout << "You can search for a contact by typing 'SEARCH'" << endl;
-    cout << "You can exit the program by typing 'EXIT'" << endl;
+    std::cout << "Welcome to the Phonebook!" << std::endl;
+    std::cout << "You can add a contact by typing 'ADD'" << std::endl;
+    std::cout << "You can search for a contact by typing 'SEARCH'" << std::endl;
+    std::cout << "You can exit the program by typing 'EXIT'" << std::endl;
     while (1)
     {
-        cout << "Enter command: ";
-        getline(cin, input);
+        std::cout << "Enter command: ";
+        std::getline(std::cin, input);
         if (input == "ADD")
         {
             if (phonebook.get_size() >= 8)
             {
-                cout << "Phonebook is full!" << endl;
+                std::cout << "Phonebook is full!" << std::endl;
                 continue;
             }
-            cout << "Enter first name: ";
-            getline(cin, data[0]);
-            cout << "Enter last name: ";
-            getline(cin, data[1]);
-            cout << "Enter nickname: ";
-            getline(cin, data[2]);
-            cout << "Enter phone number: ";
-            getline(cin, data[3]);
+            std::cout << "Enter first name: ";
+            std::getline(std::cin, data[0]);
+            std::cout << "Enter last name: ";
+            std::getline(std::cin, data[1]);
+            std::cout << "Enter nickname: ";
+            std::getline(std::cin, data[2]);
+            std::cout << "Enter phone number: ";
+            std::getline(std::cin, data[3]);
             if (!is_valid_number(data[3]))
             {
-                cout << "Invalid phone number!" << endl;
+                std::cout << "Invalid phone number!" << std::endl;
                 continue;
             }
-            cout << "Enter darkest secret: ";
-            getline(cin, data[4]);
+            std::cout << "Enter darkest secret: ";
+            std::getline(std::cin, data[4]);
             phonebook.add_contact(data);
         }
         else if (input == "SEARCH")
@@ -65,8 +65,8 @@ int main()
         }
         else
         {
-            cout << "Invalid command!" << endl;
+            std::cout << "Invalid command!" << std::endl;
         }
     }
-    cout << "Goodbye!" << endl; 
+    std::cout << "Goodbye!" << std::endl; 
 }

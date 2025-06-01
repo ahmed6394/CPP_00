@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: gahmed <gahmed@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/02 18:57:01 by gahmed            #+#    #+#             */
-/*   Updated: 2025/05/31 12:30:04 by marvin           ###   ########.fr       */
+/*   Created: 2025/06/01 23:16:44 by gahmed            #+#    #+#             */
+/*   Updated: 2025/06/01 23:16:45 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #include <string>
 #include <iostream>

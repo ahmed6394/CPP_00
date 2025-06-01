@@ -3,52 +3,52 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
+/*   By: gahmed <gahmed@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 18:57:07 by gahmed            #+#    #+#             */
-/*   Updated: 2025/04/04 19:57:47 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/06/01 23:19:01 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-void Contact::set_firstname(string firstname)
+void Contact::set_firstname(std::string firstname)
 {
     this->firstname = firstname;
 }
-void Contact::set_lastname(string lastname)
+void Contact::set_lastname(std::string lastname)
 {
     this->lastname = lastname;
 }
-void Contact::set_nickname(string nickname)
+void Contact::set_nickname(std::string nickname)
 {
     this->nickname = nickname;
 }
-void Contact::set_secret(string secret)
+void Contact::set_secret(std::string secret)
 {
     this->secret = secret;
 }
-void Contact::set_number(string number)
+void Contact::set_number(std::string number)
 {
     this->number = number;
 }
-string Contact::get_firstname()
+std::string Contact::get_firstname()
 {
     return(this->firstname);
 }
-string Contact::get_lastname()
+std::string Contact::get_lastname()
 {
     return(this->lastname);
 }
-string Contact::get_nickname()
+std::string Contact::get_nickname()
 {
     return(this->nickname);
 }
-string Contact::get_secret()
+std::string Contact::get_secret()
 {
     return(this->secret);
 }
-string Contact::get_number()
+std::string Contact::get_number()
 {
     return(this->number);
 }

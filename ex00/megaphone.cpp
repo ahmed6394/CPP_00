@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: gahmed <gahmed@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/02 13:40:18 by gahmed            #+#    #+#             */
-/*   Updated: 2025/05/31 12:27:05 by marvin           ###   ########.fr       */
+/*   Created: 2025/06/01 23:12:08 by marvin            #+#    #+#             */
+/*   Updated: 2025/06/01 23:16:52 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #include <iostream>
 

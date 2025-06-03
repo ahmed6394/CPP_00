@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 18:57:07 by gahmed            #+#    #+#             */
-/*   Updated: 2025/06/01 23:19:01 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/06/03 17:58:21 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 void Contact::set_firstname(std::string firstname)
 {
+    if (firstname.empty())
+    {
+        std::cerr << "Error: First name cannot be empty." << std::endl;
+        return;
+    }
     this->firstname = firstname;
 }
 void Contact::set_lastname(std::string lastname)

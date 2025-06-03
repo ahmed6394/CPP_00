@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 23:17:28 by gahmed            #+#    #+#             */
-/*   Updated: 2025/06/01 23:17:33 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/06/03 13:20:28 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int main()
     Phonebook phonebook;
     std::string data[5];
     std::string input;
-    int i = 0;
+    // int i = 0;
     std::cout << "Welcome to the Phonebook!" << std::endl;
     std::cout << "You can add a contact by typing 'ADD'" << std::endl;
     std::cout << "You can search for a contact by typing 'SEARCH'" << std::endl;
@@ -45,11 +45,6 @@ int main()
         std::getline(std::cin, input);
         if (input == "ADD")
         {
-            if (phonebook.get_size() >= 8)
-            {
-                std::cout << "Phonebook is full!" << std::endl;
-                continue;
-            }
             std::cout << "Enter first name: ";
             std::getline(std::cin, data[0]);
             std::cout << "Enter last name: ";
@@ -70,7 +65,28 @@ int main()
         else if (input == "SEARCH")
         {
             phonebook.display_phonebook();
+
+            std::string index_input;
+            int index;
+
+            std::cout << "Insert the index: ";
+            std::getline(std::cin, index_input);
+            try {
+                index = std::stoi(index_input);
+            } catch (...) {
+                std::cout << "Invalid input!" << std::endl;
+                continue;
+            }
+
+            if (index < 0 || index >= phonebook.get_size())
+            {
+                std::cout << "Invalid index!" << std::endl;
+                continue;
+            }
+
+            phonebook.display_details(index);
         }
+
         else if (input == "EXIT")
         {
             break;

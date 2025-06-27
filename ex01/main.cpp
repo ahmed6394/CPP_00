@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 23:17:28 by gahmed            #+#    #+#             */
-/*   Updated: 2025/06/03 13:20:28 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/06/03 21:21:16 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,7 @@ int main()
     Phonebook phonebook;
     std::string data[5];
     std::string input;
-    // int i = 0;
-    std::cout << "Welcome to the Phonebook!" << std::endl;
-    std::cout << "You can add a contact by typing 'ADD'" << std::endl;
-    std::cout << "You can search for a contact by typing 'SEARCH'" << std::endl;
-    std::cout << "You can exit the program by typing 'EXIT'" << std::endl;
+    std::cout << "Enter Command (ADD, SEARCH, EXIT)" << std::endl;
     while (1)
     {
         std::cout << "Enter command: ";
@@ -65,10 +61,13 @@ int main()
         else if (input == "SEARCH")
         {
             phonebook.display_phonebook();
-
             std::string index_input;
             int index;
-
+            if (phonebook.get_size() == 0)
+            {
+                std::cout << "Phonebook is empty!" << std::endl;
+                continue;
+            }
             std::cout << "Insert the index: ";
             std::getline(std::cin, index_input);
             try {
@@ -86,15 +85,10 @@ int main()
 
             phonebook.display_details(index);
         }
-
         else if (input == "EXIT")
-        {
             break;
-        }
         else
-        {
             std::cout << "Invalid command!" << std::endl;
-        }
     }
-    std::cout << "Goodbye!" << std::endl; 
+    return (0);
 }

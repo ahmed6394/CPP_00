@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 23:14:28 by gahmed            #+#    #+#             */
-/*   Updated: 2025/06/03 18:09:53 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/06/03 21:13:25 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,13 @@
 
 void	print_name(std::string str)
 {
-	unsigned int j;
-
-	j = 0;
 	if (str.length() > 10)
 	{
 		std::cout << str.substr(0, 9);
 		std::cout << ".";
 	}
 	else
-	{
-		j = 0;
-		while (j++ < 10 - str.length())
-			std::cout << " ";
-		std::cout << str;
-	}
+		std::cout << std::right << std::setw(10) << str;
 }
 
 int Phonebook::get_size()
@@ -36,14 +28,15 @@ int Phonebook::get_size()
 	return (this->size);
 }
 
-bool is_empty(const std::string data[5]) 
+bool Phonebook::is_empty(std::string data[5])
 {
-	for (int i = 0; i < 5; i++) {
-		if (!data[i].empty()) {
-			return false;
-		}
+	if (data[0].empty() || data[1].empty() || data[2].empty() ||
+		data[3].empty() || data[4].empty())
+	{
+		std::cout << "Error: Contact cannot be empty." << std::endl;
+		return (true);
 	}
-    return true;
+	return (false);
 }
 
 void Phonebook::add_contact(std::string data[5])
@@ -52,10 +45,7 @@ void Phonebook::add_contact(std::string data[5])
 
 	index = this->index;
 	if(is_empty(data))
-	{
-		std::cout << "Error: Contact cannot be empty." << std::endl;
 		return;
-	}
 	this->contacts[index].set_firstname(data[0]);
 	this->contacts[index].set_lastname(data[1]);
 	this->contacts[index].set_nickname(data[2]);
@@ -82,11 +72,11 @@ void Phonebook::display_phonebook()
 	while (i < this->size)
 	{
 		
-		std::cout << i+1 << " | ";
+		std::cout << std::right << std::setw(10) << i << " | ";
 		print_name(this->contacts[i].get_firstname());
 		std::cout << " | "; 
 		print_name(this->contacts[i].get_lastname());
-		std::cout << " | ";
+		std::cout <<  " | ";
 		print_name(this->contacts[i].get_nickname());
 		std::cout << std::endl;
 		i++;

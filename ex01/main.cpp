@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gahmed <gahmed@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 23:17:28 by gahmed            #+#    #+#             */
-/*   Updated: 2025/06/03 21:21:16 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/07/01 14:02:55 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ int main()
     {
         std::cout << "Enter command: ";
         std::getline(std::cin, input);
+		if (std::cin.eof())
+			break;
         if (input == "ADD")
         {
             std::cout << "Enter first name: ";
